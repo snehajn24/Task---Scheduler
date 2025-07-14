@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Scheduler</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>📆 Task Scheduler</h1>
+      <p>Schedule recurring tasks and get simulated notifications.</p>
+    </header>
+
+    <section class="card">
+      <h2>➕ Add Task</h2>
+      <input type="text" id="taskTitle" placeholder="Task Title" />
+      <input type="datetime-local" id="taskDate" />
+      <select id="recurrence">
+        <option value="none">No Repeat</option>
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+        <option value="monthly">Monthly</option>
+      </select>
+      <button onclick="addTask()">Add Task</button>
+    </section>
+
+    <section class="card">
+      <h2>📋 Upcoming Tasks</h2>
+      <ul id="taskList"></ul>
+    </section>
+
+    <section class="card">
+      <h2>🔔 Notifications</h2>
+      <div id="notifications"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
